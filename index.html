@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Quotes Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top navigation bar -->
+  <nav class="navbar">
+    <h2 class="logo">Quotes</h2>
+    <div class="nav-links">
+      <span id="userInfo"></span>
+      <button id="logoutBtn" class="link-btn" style="display:none;">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Random Quotes Generator</h1>
+
+    <!-- Category filter (optional feature) -->
+    <div class="category-row">
+      <label for="category">Category:</label>
+      <select id="category">
+        <option value="all">All</option>
+        <option value="motivational">Motivational</option>
+        <option value="life">Life</option>
+        <option value="success">Success</option>
+      </select>
+    </div>
+
+    <!-- Quote card -->
+    <div class="quote-card">
+      <p id="quoteText" class="quote-text">Click the button below to get a quote!</p>
+      <p id="quoteAuthor" class="quote-author"></p>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="button-row">
+      <button id="newQuoteBtn" class="btn primary">Generate New Quote</button>
+      <button id="copyBtn" class="btn">Copy Quote</button>
+      <button id="saveBtn" class="btn">Save Favorite</button>
+    </div>
+
+    <!-- Saved favorites section -->
+    <section class="favorites">
+      <h2>Favorite Quotes</h2>
+      <ul id="favoritesList"></ul>
+    </section>
+  </main>
+
+  <!-- Toast message -->
+  <div id="toast" class="toast"></div>
+
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
